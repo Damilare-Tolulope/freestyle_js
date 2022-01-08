@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navTextColor: #ffd1d1;
+  --navBg: #000;
+  --textColor: #fff;
+  --backgroundColor: red;
+  --img: url("./assets/images/3d_landscape_10.jpg");
+  --bgImg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), var(--img);
+}
+body {
+  background-image: var(--bgImg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 1s linear;
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  height: 100vh;
+}
+
+/* =================LEFT============= */
+.left-bar {
+  background-color: var(--navBg);
+  color: var(--navTextColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80px;
+  height: 100%;
+}
+.logo {
+  font: 500 40px "Segoe Print";
+  transform: rotate(20deg);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.logo:hover {
+  transform: rotate(0deg);
+  transition: all 0.3s linear;
+}
+.address {
+  transform: rotate(270deg);
+  padding: 20px 0;
+  font: 100 14px "Comic Sans MS";
+  width: 100px;
+}
+.images {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.images img {
+  height: 40px;
+  width: 60px;
+  margin-bottom: 2px;
+  border: 1px solid var(--navTextColor);
+}
+.caret {
+  font: 300 15px arial;
+}
+.down {
+  transform: rotate(180deg);
+}
+.dot {
+  background-color: var(--navBg);
+  border-radius: 50%;
+  padding: 10px;
+  border: 2px solid var(--navTextColor);
+  margin: 30px 0;
+  cursor: pointer;
+}
+.inner-dot {
+  background-color: var(--navTextColor);
+  border-radius: 50%;
+  padding: 15px;
+  transition: all 0.5s linear;
+}
+.inner-dot:hover {
+  transform: scale(0.8);
+  transition: all 0.5s linear;
+}
+.socials ul {
+  list-style-type: none;
+  text-align: center;
+}
+.socials ul li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: var(--navTextColors);
+  transition: all 0.3s linear;
+}
+.socials ul li:hover {
+  transform: scale(0.85);
+  transition: all 0.3s linear;
+}
+.socials ul li img {
+  padding: 5px;
+  background-color: white;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  cursor: pointer;
+}
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--navTextColor);
+  padding: 1px;
+  margin-bottom: 5px;
+}
+
+/* =================CENTER============= */
+.center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+  color: var(--textColor);
+}
+.name h3 {
+  font: bolder 28px "Segoe UI Symbol";
+}
+.name p {
+  font: bold 22px "Segoe UI Symbol";
+}
+.divider {
+  height: 5px;
+  width: 50px;
+  padding: 1px;
+  margin-right: 10px;
+  background-color: red;
+  border-radius: 0 5px 5px 0;
+  transition: backgroun-color 0.3s ease-in-out;
+}
+
+.arrow {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  bottom: 0;
+  display: flex;
+  margin: auto 50%;
+  position: absolute;
+}
+
+.right-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
+}
+.date {
+  font: bolder 30px "Segoe UI Symbol";
+  color: var(--navTextColor);
+  opacity: 0.6;
+  padding-top: 25px;
+}
+.date small {
+  font-size: 20px;
+}
+#sup {
+  font-size: 14px;
+  margin-left: 3px;
+}
+.day {
+  font: bolder 20px "Segoe UI Symbol";
+  color: var(--navTextColor);
+  opacity: 0.6;
+  padding-bottom: 25px;
+  padding-right: 20px;
+}
+.pointer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+.circle {
+  height: 7px;
+  width: 7px;
+  background-color: var(--navTextColor);
+  border: none;
+  border-radius: 50%;
+}
+
+/* ========MODAL============== */
+.modal {
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  background-color: var(--navBg);
+  bottom: 0;
+  width: 250px;
+  padding: 10px;
+  /* left: 80px; */
+  left: -250px;
+  transition: all 0.5s linear;
+}
+.modal ul {
+  list-style-type: none;
+  color: var(--navTextColor);
+}
+.modal ul li {
+  padding: 20px;
+  font: 500 20px "Segoe UI Symbol";
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+  transition: all 0.5s linear;
+}
+.modal ul li:hover {
+  transition: all 0.5s linear;
+  border-bottom: 1px solid var(--navTextColor);
+}
+
+@media screen and (max-width: 400px) {
+  .dot {
+    padding: 7px;
+  }
+  .inner-dot {
+    padding: 10px;
+  }
+  .modal {
+    /* width: 100%; */
+    margin-left: -20px;
+  }
+  .modal ul li {
+    text-align: left;
+    padding-left: 100px;
+  }
+  .left-bar {
+    width: 60px;
+  }
+  .divider {
+    width: 20px;
+    height: 1px;
+    margin-right: 5px;
+    border-radius: 0 2px 2px 0;
+  }
+  .name h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .name p {
+    font-size: 16px;
+    font-weight: 200;
+  }
+}
